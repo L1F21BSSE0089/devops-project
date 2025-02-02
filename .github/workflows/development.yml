@@ -4,13 +4,22 @@ on:
   pull_request:
     branches:
       - develop
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+      
+      - name: Move to src directory
+        run: cd src
+
       - name: Install Dependencies
-        run: npm install
-      - name: Lint Code
-        run: npm run lint
+        run: npm install  # If using Node.js, else remove
+
+      - name: Lint HTML
+        run: npx htmlhint "src/**/*.html"
+
+      - name: Lint CSS
+        run: npx stylelint "src/**/*.css"
