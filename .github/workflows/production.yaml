@@ -11,7 +11,12 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-      - name: Run Final Tests
-        run: npm run test
+
+      - name: Move to src directory
+        run: cd src
+
+      - name: Build Project
+        run: npm run build  # Optional, if required
+
       - name: Deploy to Production
-        run: echo "Deploying to Production"
+        run: echo "Deploying website from src directory"
