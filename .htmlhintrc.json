@@ -1,4 +1,6 @@
 {
+  "files": ["src/**/*.html"],
+  "rules": {
   "attr-lowercase": true,
   "attr-no-duplication": true,
   "attr-value-double-quotes": true,
@@ -9,4 +11,5 @@
   "tagname-lowercase": true,
   "title-require": true,
   "space-tab-mixed-disabled": "space"
+  }
 }
