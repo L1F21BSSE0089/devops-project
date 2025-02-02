@@ -1,0 +1,15 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "color-no-invalid-hex": true,
+    "declaration-block-no-duplicate-properties": true,
+    "block-no-empty": true,
+    "selector-pseudo-class-no-unknown": true,
+    "selector-pseudo-element-no-unknown": true,
+    "property-no-unknown": true,
+    "no-extra-semicolons": true,
+    "declaration-block-semicolon-newline-after": "always",
+    "indentation": 2,
+    "max-nesting-depth": 3
+  }
+}

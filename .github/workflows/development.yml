@@ -1,0 +1,16 @@
+name: Development CI/CD
+
+on:
+  pull_request:
+    branches:
+      - develop
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Lint Code
+        run: npm run lint
