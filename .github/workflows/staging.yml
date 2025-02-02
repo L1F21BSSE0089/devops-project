@@ -1,0 +1,17 @@
+name: Staging Deployment
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Build Project
+        run: npm run build
+      - name: Deploy to Staging
+        run: echo "Deploying to Staging"
